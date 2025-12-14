@@ -1,0 +1,23 @@
+#include <math.h>
+
+#define PI        3.14159265358979323846
+
+
+int main() {
+
+	setlocale(LC_CTYPE, "RUS");
+
+	float gr;
+
+
+	puts("Введите значение градусов угла, синус которого хотите расчитать");
+	scanf("%f", &gr);
+	getchar();
+
+	
+	float result = gr * PI / 180; // градусы в радианы
+	
+	float res = sin(result);
+	
+	printf("Угол - %.f, его синус - %f ", gr, res);
+}
