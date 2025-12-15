@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+
+#define    p    0.5
+
+
+int main() {
+
+	setlocale(LC_CTYPE, "RUS");
+
+	float a;
+	float b;
+	float x;
+	float y;
+
+	puts("Введите число X: ");
+	scanf("%f", &x);
+
+	a = log(p * p + x * x * x);
+	b = exp(pow(fabs(x), 0.5));
+	y = (a * a * a) / (b * b);
+
+
+	printf("Переменные: \nx = %.4f\ny = %.4f\na = %f.4\nb = %.4f", x, y, a, b);
+	return 0;
+}
